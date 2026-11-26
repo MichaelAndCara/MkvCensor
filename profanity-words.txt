@@ -1,0 +1,24 @@
+# One word or short phrase per line. Case-insensitive, whole-word matching.
+# Lines starting with # are ignored. Edit freely to fit your needs.
+#
+# End an entry with * to also match any suffix glued onto it — e.g. "fuck*"
+# matches "fuck", "fucking", "fucked", "fucker", etc. Leave the * off for an
+# exact whole-word match only. Use * carefully on short roots: "hell*" would
+# also flag "hello", "ass*" would also flag "assassin" — those two are left
+# as exact matches below for that reason.
+#damn*
+#goddamn
+#hell
+#crap
+#piss*
+#bitch*
+#bastard*
+#ass
+#asshole*
+#dick*
+#bullshit
+shit*
+fuck*
+motherfucker*
+pussy*
+#son of a bitch

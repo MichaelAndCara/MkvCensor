@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>MkvCensor</RootNamespace>
+    <AssemblyName>MkvCensor</AssemblyName>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Bundled ffmpeg/ffprobe, and the optional word-level alignment
+         model (Assets/Models/), ride along next to the built executable
+         and, with dotnet publish, next to the published one too. -->
+    <None Include="Assets/**" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- GPU package includes the CPU provider too, so this alone covers
+         both; falls back to CPU automatically if CUDA/cuDNN aren't set up
+         on the machine running it (see Assets/Models/README.txt). -->
+    <PackageReference Include="Microsoft.ML.OnnxRuntime.Gpu" Version="1.24.1" />
+  </ItemGroup>
+
+</Project>
